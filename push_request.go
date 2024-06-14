@@ -8,10 +8,14 @@ type PushRequest struct {
 	Data   map[string]string `json:"data"`
 }
 
-type PushResponse struct {
+type PushSuccessResponse struct {
 	Id        string `json:"id"`
 	Token     string `json:"token"`
 	Success   bool   `json:"success"`
 	MessageId string `json:"messageId"`
 	Error     string `json:"error"`
+}
+type PushErrorResponse struct {
+	Description string `json:"description"`
+	Message     string `json:"message"`
 }
