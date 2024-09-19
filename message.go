@@ -56,6 +56,7 @@ type UserPushMessage struct {
 	Message   *Message       `gorm:"column:message;type:jsonb;notNull;default:'{}'"`
 	Devices   pq.StringArray `gorm:"column:devices;type:varchar[];notNull;default:'{}'"`
 	IsViewed  bool           `gorm:"column:isViewed;type:boolean;notNull;default:false"`
+	Type      string         `gorm:"column:type;default:''"`
 	CreatedAt time.Time      `gorm:"column:createdAt;type:timestamp with time zone;notNull;default:now()"`
 	UpdatedAt time.Time      `gorm:"column:updatedAt;type:timestamp with time zone;notNull;default:now()"`
 }
